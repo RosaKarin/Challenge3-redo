@@ -15,14 +15,13 @@ var map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl()); //zorgt voor inzoom/uitzoom controlls
 
-
 // WEATHER API
 
 function getAPIdata() {
 
 	var url = 'https://api.openweathermap.org/data/2.5/weather';
 	var apiKey ='4e30323e9106e314cab4f102762a1c2c';
-	var city = document.getElementById('city').value;
+	var city = document.getElementById('geocoder').value;
 	// var cityName = response.name;
 
 	// construct request
@@ -77,20 +76,9 @@ document.getElementById('getWeather').onclick = function(){
 	getAPIdata();
 };
 
-// Add the control to the map.
-const geocoder = new MapboxGeocoder({
-	accessToken: mapboxgl.accessToken,
-	mapboxgl: mapboxgl
-});
+
 
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
-
-
-
-
-
-
-
 
 
 // // Den Haag
