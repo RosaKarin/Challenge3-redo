@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(sunset.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+h3, h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color: black;
+    z-index: 999;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-areas:
+        "header"
+        "field"
+        "map";    
+}
+
+#map {
+    grid-area: map;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 620px;
+    margin-bottom: 10px;
+}
+
+
+#header {
+    grid-area: header;
+}
+
+#field {
+    grid-area: field;
+}
+
+.grid-item-header {
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.glass { 
+    background: white;
+    background: linear-gradient(to right bottom, 
+    rgba(255, 255, 255, 0.6), 
+    rgba(255, 255, 255, 0.3));
+    border-radius: 5px;
+}
+
+/* .geocoder {
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    top: 10px;
+} */

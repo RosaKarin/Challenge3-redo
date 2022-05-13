@@ -76,8 +76,6 @@ document.getElementById('getWeather').onclick = function(){
 	getAPIdata();
 };
 
-
-
 document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
 
 
